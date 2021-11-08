@@ -4,10 +4,10 @@ _This project is derived from Baeldung, see https://github.com/eugenp/tutorials/
 
 ### Tech Stack
 
-* Spring Boot
+* Spring Boot (start with https://start.spring.io/)
 * Apache Maven
-* Sprint Data JPA (H2)
-* Spring MVC (Thymeleaf)
+* Spring Data JPA (H2 in-memory database)
+* Spring MVC ([Thymeleaf](https://www.thymeleaf.org/) as template engine)
 
 ### Persistence
 
