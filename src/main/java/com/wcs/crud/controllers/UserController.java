@@ -14,14 +14,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class UserController {
-    
-    private final UserRepository userRepository;
 
     @Autowired
-    public UserController(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
-    
+    private UserRepository userRepository;
+
     @GetMapping("/index")
     public String showUserList(Model model) {
         model.addAttribute("users", userRepository.findAll());

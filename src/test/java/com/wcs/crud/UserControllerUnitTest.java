@@ -7,6 +7,7 @@ import static org.mockito.Mockito.when;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 
@@ -26,7 +27,8 @@ public class UserControllerUnitTest {
         mockedUserRepository = mock(UserRepository.class);
         mockedBindingResult = mock(BindingResult.class);
         mockedModel = mock(Model.class);
-        userController = new UserController(mockedUserRepository);
+        userController = new UserController();
+        ReflectionTestUtils.setField(userController, "userRepository", mockedUserRepository);
     }
 
     @Test
